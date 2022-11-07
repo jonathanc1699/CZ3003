@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "02c3a7a7-41bf-4271-b95d-ff4480871aaf",
+		"name": "CZ3003 APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"usertwo@test.com\",\r\n    \"password\": \"123456\",\r\n    \"username\": \"usertwo\",\r\n    \"role\": \"student\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"usertwo@test.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateGameplayLevel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"levelId\": 16,\r\n    \"ans1\": 24,\r\n    \"ans2\": 12,\r\n    \"ans3\": 6,\r\n    \"ans4\": 0,\r\n    \"correctAnswer\": 1,\r\n    \"points\": 10,\r\n    \"question\": \"What is 6*4?\",\r\n    \"worldId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/levels"
+			},
+			"response": []
+		},
+		{
+			"name": "GetWorldLevels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/levels/1"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/user/hNbMPFR8uehRp9tGRWFyCq34jRM2"
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserPoints",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"totalPoints\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/user/points/hNbMPFR8uehRp9tGRWFyCq34jRM2"
+			},
+			"response": []
+		},
+		{
+			"name": "createUserWorld",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"user two's world\",\r\n    \"description\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/hNbMPFR8uehRp9tGRWFyCq34jRM2/world"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUserLevel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ans1\": 24,\r\n    \"ans2\": 12,\r\n    \"ans3\": 42,\r\n    \"ans4\": 0,\r\n    \"correctAnswer\": 3,\r\n    \"points\": 11,\r\n    \"question\": \"What is 6*7?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/hNbMPFR8uehRp9tGRWFyCq34jRM2/level"
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserLevels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/hNbMPFR8uehRp9tGRWFyCq34jRM2/levels"
+			},
+			"response": []
+		},
+		{
+			"name": "updateGameplayLevel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"levelId\": 16,\r\n    \"ans1\": 12,\r\n    \"ans2\": 24,\r\n    \"ans3\": 6,\r\n    \"ans4\": 0,\r\n    \"correctAnswer\": 2,\r\n    \"points\": 30,\r\n    \"question\": \"Neww question\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/level/16"
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserLevel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"levelId\": 16,\r\n    \"ans1\": 12,\r\n    \"ans2\": 24,\r\n    \"ans3\": 6,\r\n    \"ans4\": 0,\r\n    \"correctAnswer\": 2,\r\n    \"points\": 30,\r\n    \"question\": \"Neww question\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/user/level/1"
+			},
+			"response": []
+		}
+	]
+}
